@@ -2,8 +2,20 @@ body {
     background: url("background.png");
     background-size: cover;
     background-attachment: fixed;
-    align-self: center;
-    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
+header {
+    background-color: rgba(211, 211, 211);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 5vh;
+    position: fixed;
+    padding: 20px;
+    width: 100vw;
+    justify-items: center;
 }
 
 content {
@@ -17,7 +29,30 @@ content {
     border-radius: 15px;
     padding: 5vh;
     max-height: fit-content;
+    margin-top: 12vh;
+    min-height: 85vh;
+    min-width: 80vw;
 
+}
+
+bilder {
+    background-color: rgba(211, 211, 211, .9);
+    display: grid;
+    background-size: 100vw 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-self: center;
+    justify-items: center;
+    border-radius: 15px;
+    padding: 5vh;
+    max-height: fit-content;
+    margin-top: 12vh;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
 }
 
 p {
@@ -25,7 +60,6 @@ p {
     justify-content: left;
     align-items: center;
     width: 80vw;
-    position: relative;
 }
 
 text {
@@ -47,12 +81,29 @@ video {
     max-width: 70vw;
 }
 
+@media only screen and (max-device-width: 800px) {
+    bilder {
+        background-color: rgba(211, 211, 211, .9);
+        display: grid;
+        background-size: 100vw 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        justify-self: center;
+        justify-items: center;
+        border-radius: 15px;
+        padding: 5vh;
+        max-height: fit-content;
+        margin-top: 12vh;
+        margin: auto;
+    }
+}
+
 @media only screen and (max-device-width: 500px) {
     img {
         max-width: 250px;
     }
 
-    iframe {
+    text iframe {
         max-width: 250px;
         max-height: 150px;
     }
@@ -71,5 +122,19 @@ video {
 
     p {
         max-width: 250px;
+    }
+
+    bilder {
+        background-color: rgba(211, 211, 211, .9);
+        display: grid;
+        background-size: 100vw 100vh;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        justify-self: center;
+        justify-items: center;
+        border-radius: 15px;
+        padding: 5vh;
+        max-height: fit-content;
+        margin-top: 12vh;
     }
 }
